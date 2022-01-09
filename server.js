@@ -1,8 +1,10 @@
 const express = require("express");
+const appRouter = require("./routes");
 
 const app = express();
 
 app.use(express.json());
+app.use(appRouter);
 app.get("/", (req, res) => {
   res.send({ health: "OK" });
 });
