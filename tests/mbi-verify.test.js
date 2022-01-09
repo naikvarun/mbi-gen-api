@@ -7,7 +7,7 @@ describe("Generate MBI API", () => {
     return supertest(app).post("/mbi/verify").send({}).expect(400);
   });
 
-  test("should return a 400 on invlaid MBI (length)", async () => {
+  test("should return a 200 on invlaid MBI (length)", async () => {
     return supertest(app)
       .post("/mbi/verify")
       .send({ mbi: "abc" })
