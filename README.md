@@ -31,7 +31,7 @@ Sample Response:
 }
 ```
 
-### `POST /mbi/generate`
+### `POST /mbi/verify`
 
 
 It will validate the MBI provided and send a result
