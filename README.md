@@ -22,6 +22,7 @@ MBI: Medicare Beneficiary Identifier
 ### `GET /mbi/generate`
 
 It will generate a random valid MBI
+
 Sample Response:
 
 ```json
@@ -32,14 +33,18 @@ Sample Response:
 
 ### `POST /mbi/generate`
 
-It will validate the MBI provided and send a result
-It will send `HTTP 200` for invalid MBI
-Return fields:
 
+It will validate the MBI provided and send a result
+
+It will send `HTTP 200` for invalid MBI
+
+Return fields:
 - `mbi`: MBI passed to verify
 - `isValid`: true/false if MBI is valid or not
-  Example:
 
+Example:
+
+Request
 ```http
 POST http://localhost:3001/mbi/verify
 Content-Type: application/json
